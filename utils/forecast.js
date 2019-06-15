@@ -8,8 +8,8 @@ exports.forecast = (latitude, longtitude, cb) => {
     } else if (res.body.error) {
       cb(res.body.error);
     } else {
-      const { temperature, precipProbability } = res.body.currently;
-      cb(undefined, `It's currently ${temperature} degrees out. There is ${precipProbability*100}% chance of rain`);
+      const { temperature, precipProbability, humidity } = res.body.currently;
+      cb(undefined, `It's currently ${temperature} degrees out. There is ${precipProbability*100}% chance of rain. Humidity ${humidity*100}%`);
     }
   });
 }
