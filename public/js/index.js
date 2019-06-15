@@ -4,7 +4,7 @@ let address = document.getElementById('address');
 let input = document.getElementById('search');
 form.addEventListener('submit', (e) => {
   e.preventDefault();
-  fetch(`http://localhost:3000/weather?location=${input.value}`)
+  fetch(`/weather?location=${input.value}`)
     .then(res => res.json())
     .then(data => {
       if(data.err) {
