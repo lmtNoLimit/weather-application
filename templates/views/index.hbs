@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {{>head}}
+</head>
+<body>
+  {{>navbar}}
+  <div class="container">
+    {{>header}}
+    <div class="content">
+      <form>
+        <input id="search" type="text" placeholder="Search...">
+        <button id="submit">Search</button>
+      </form>
+      <p id="address"></p>
+      <p id="forecast"></p>
+    </div>
+  </div>
+  {{>footer}}
+</body>
+</html>
